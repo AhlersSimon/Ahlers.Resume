@@ -1,8 +1,42 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+<PageTitle>Start</PageTitle>
 
-<h1>Hello, world</h1>
+<MudCarousel @ref="_mudCarousel" Class="mud-width-full" Style="height:90vh" AutoCycle="false" ShowBullets="@bullets" ShowArrows="@arrows" @onmousewheel="NextItem" TData="object">
+<MudCarouselItem Transition="_transition" Color="@Color.Primary">
+        <div class="d-flex" style="height:100%">
+            <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="_transition" Color="@Color.Secondary">
+        <div class="d-flex" style="height:100%">
+            <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Transition="_transition">
+        <div class="d-flex" style="height:100%">
+            <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Color="@Color.Primary" Size="@Size.Large" />
+        </div>
+    </MudCarouselItem>
+</MudCarousel>
 
-Welcome to your new app.
-<MudIcon Icon="@Icons.Filled._3k"></MudIcon>
+@code{
+    private bool bullets = true;
+    private bool arrows = false;
+    private Transition _transition = Transition.Slide;
+    private MudCarousel<object> _mudCarousel;
+
+
+    protected void NextItem(WheelEventArgs e)
+    {
+        if (e.DeltaY > 0)
+        {
+            _mudCarousel.Previous();
+        }
+
+        if (e.DeltaY < 0)
+        {
+            _mudCarousel.Next();
+        }
+    }
+}
