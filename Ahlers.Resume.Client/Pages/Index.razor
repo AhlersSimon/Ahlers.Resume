@@ -2,7 +2,7 @@
 
 <PageTitle>Start</PageTitle>
 
-<MudCarousel @ref="_mudCarousel" Class="mud-width-full" Style="height:90vh" AutoCycle="false" ShowBullets="@bullets" ShowArrows="@arrows" @onmousewheel="NextItem" TData="object">
+<MudCarousel @ref="_mudCarousel" Class="mud-width-full" Style="height:90vh" AutoCycle="false" ShowBullets="@bullets" ShowArrows="@arrows" @onwheel="NextItem" @onmousewheel="NextItem" TData="object">
 <MudCarouselItem Transition="_transition" Color="@Color.Primary">
         <div class="d-flex" style="height:100%">
             <MudIcon Class="mx-auto my-auto" Icon="@Icons.Custom.Brands.MudBlazor" Size="@Size.Large" />
