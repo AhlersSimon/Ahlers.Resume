@@ -5,14 +5,18 @@
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Elevation="25" >
+    <MudAppBar Color="Color.Info" Elevation="25" >
         <MudText Typo="Typo.h4">Simon Ahlers</MudText>
         <MudSpacer/>
+        <MudButton Color="Color.Inherit" ><MudText Typo="Typo.button">About</MudText></MudButton>
+        <MudButton Color="Color.Inherit"><MudText Typo="Typo.button">Projekte</MudText></MudButton>
+        <MudButton Color="Color.Inherit" StartIcon="@Icons.Material.Filled.Send"><MudText Typo="Typo.button">Kontakt</MudText></MudButton>
+        <MudIconButton Icon="@Icons.Custom.Brands.LinkedIn" Color="Color.Inherit"/>
         <MudIconButton Icon="@Icons.Custom.Brands.GitHub" Color="Color.Inherit" />
     </MudAppBar>
 
     <MudMainContent>
-        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge">
+        <MudContainer MaxWidth="MaxWidth.ExtraExtraLarge" Class="page-background-class">
             @Body
          </MudContainer>
     </MudMainContent>

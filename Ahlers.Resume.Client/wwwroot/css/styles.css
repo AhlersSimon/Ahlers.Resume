@@ -10,7 +10,7 @@
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        background: #42c2f5;
+        background: #3D5AFE;
         animation: lds-grid 1.2s linear infinite;
     }
 
@@ -76,4 +76,11 @@
     50% {
         opacity: 0.5;
     }
+}
+
+.page-background-class{
+    background-image:url(../images/wave-haikei.svg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    height:100vh
 }

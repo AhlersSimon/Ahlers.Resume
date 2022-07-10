@@ -7,9 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\index.html" />
+    <Content Remove="wwwroot\wave-haikei.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.5" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.5" PrivateAssets="all" />
     <PackageReference Include="MudBlazor" Version="6.0.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wwwroot\index.html" />
+    <Resource Include="wwwroot\wave-haikei.svg" />
   </ItemGroup>
 
 </Project>
